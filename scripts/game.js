@@ -3,6 +3,7 @@ class Game {
     // game properties
     this.obstacles = [];
     this.player = new ThePlayer();
+    this.background = new Background();
     this.gameOver = false;
     this.score = 0;
   }
@@ -10,10 +11,12 @@ class Game {
   setup() {
     createCanvas(GAME_WIDTH, GAME_HEIGHT);
     frameRate(60);
-    background(BGCOLOR);
+    background(0);
+    this.background.setup();
     this.player.setup();
   }
   draw() {
+    this.background.draw();
     this.player.draw();
   }
 }
