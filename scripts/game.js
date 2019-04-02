@@ -11,7 +11,6 @@ class Game {
   setup() {
     createCanvas(GAME_WIDTH, GAME_HEIGHT);
     frameRate(60);
-    background(0);
     this.background.setup();
     this.player.setup();
   }

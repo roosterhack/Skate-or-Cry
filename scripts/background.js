@@ -6,16 +6,6 @@ let boxesContainerSprites;
 let wall1Sprites;
 let wall2Sprites;
 
-function preload() {
-  road1 = loadImage("/assets/img/resized/road-border.png");
-  wheelsHydrant = loadImage("/assets/img/resized/wheels-hydrant.png");
-  boxesContainer = loadImage("/assets/img/resized/boxes-container.png");
-  buildings = loadImage("/assets/img/resized/buildings.png");
-  sky = loadImage("/assets/img/resized/sky.png");
-  wall1 = loadImage("/assets/img/resized/wall1.png");
-  wall2 = loadImage("/assets/img/resized/wall2.png");
-}
-
 class Background {
   constructor() {}
   setup() {

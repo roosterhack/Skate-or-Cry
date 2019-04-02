@@ -1,41 +1,53 @@
+let mainPlayer;
+let playerPush;
+let moveRight;
+let playerOllie;
+let playerKickflip;
+
 class ThePlayer {
   constructor() {
     this.Jumped = false;
   }
 
   setup() {
-    this.player = createSprite(100, height - 50, 50, 50);
+    mainPlayer = createSprite();
+    mainPlayer.addAnimation("push", playerPush);
+    mainPlayer.addAnimation("ollie", playerOllie);
+    mainPlayer.scale = 2;
+    mainPlayer.position.y = height - 200;
   }
   draw() {
     background(BGCOLOR);
-    this.player.velocity.y += GRAVITY;
+    mainPlayer.velocity.y += GRAVITY;
+    mainPlayer.position.x += 5;
 
-    //detect player touching the  ground then make player stop going down
-    if (this.player.position.y + this.player.height >= height) {
-      this.player.velocity.y = 0;
+    // //detect player touching the ground then make player stop going down
+    if (mainPlayer.position.y + mainPlayer.height >= height) {
+      mainPlayer.velocity.y = 0;
+      mainPlayer.changeAnimation("push", playerPush);
       this.Jumped = false;
     }
 
-    if (keyDown(RIGHT_ARROW)) {
-      this.player.position.x += 5;
-      if (keyDown(32) && !this.Jumped) {
-        this.player.velocity.y = JUMP;
-        this.Jumped = true;
-      }
-      background(BGCOLOR);
-    } else if (keyDown(LEFT_ARROW)) {
-      this.player.position.x -= 5;
-      if (keyDown(32) && !this.Jumped) {
-        this.player.velocity.y = JUMP;
-        this.Jumped = true;
-      }
-      background(BGCOLOR);
-    } else if (keyDown(32) && !this.Jumped) {
-      this.player.velocity.y = JUMP;
+    // if (keyDown(RIGHT_ARROW)) {
+    // if (keyDown(16) && !this.Jumped) {
+    //   mainPlayer.changeAnimation("ollie", playerOllie);
+    //   mainPlayer.velocity.y = JUMP;
+    //   this.Jumped = true;
+    // }
+    // mainPlayer.changeAnimation("push", playerPush);
+    // } else if (keyDown(LEFT_ARROW)) {
+    //   mainPlayer.position.x -= 5;
+    //   if (keyDown(32) && !this.Jumped) {
+    //     mainPlayer.velocity.y = JUMP;
+    //     this.Jumped = true;
+    //   }
+    if (keyDown(16) && !this.Jumped) {
+      mainPlayer.velocity.y = JUMP;
+      mainPlayer.changeAnimation("ollie", playerOllie);
       this.Jumped = true;
     }
 
-    camera.position.x = this.player.position.x + width / 3;
+    camera.position.x = mainPlayer.position.x + width / 3;
 
     drawSprites();
   }
