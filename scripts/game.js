@@ -22,6 +22,7 @@ class Game {
   }
   draw() {
     if (isGameOver) {
+      hipHop1.stop();
       background(0);
       image(gameOver, 0, 0);
       fill(255);
@@ -46,5 +47,6 @@ class Game {
 }
 
 function endGame() {
+  hurtSound.play();
   isGameOver = true;
 }

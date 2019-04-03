@@ -6,6 +6,12 @@ const GRAVITY = 0.35;
 const JUMP = -8;
 
 function preload() {
+  pushSound = loadSound("/assets/sounds/rolling.mp3");
+  ollieSound = loadSound("/assets/sounds/ollie.mp3");
+  hurtSound = loadSound("/assets/sounds/hurt.mp3");
+  hipHop1 = loadSound("/assets/sounds/oldschoolhiphop.wav");
+  hipHop2 = loadSound("/assets/sounds/hiphop.wav");
+
   fontRegular = loadFont("/assets/fonts/Retro Gaming.ttf");
   gameOver = loadImage("/assets/img/gameOver/gameOver.jpg");
   city2 = loadImage("/assets/img/city1/City2.png");

@@ -19,6 +19,8 @@ class ThePlayer {
     this.mainPlayer.addAnimation("slam", playerSlam);
     this.mainPlayer.scale = 2;
     this.mainPlayer.position.y = height - 450;
+    hipHop1.loop();
+    hipHop1.setVolume(0.6);
   }
   draw() {
     background(BGCOLOR);
@@ -33,8 +35,12 @@ class ThePlayer {
     }
 
     if (keyDown(16) && !this.Jumped) {
+      if (!ollieSound.isPlaying()) {
+        ollieSound.play();
+      }
       this.mainPlayer.velocity.y = JUMP;
       this.mainPlayer.changeAnimation("ollie", playerOllie);
+
       this.Jumped = true;
     }
 
