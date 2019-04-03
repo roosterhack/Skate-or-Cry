@@ -5,6 +5,7 @@ let wheelHydrantSprites;
 let boxesContainerSprites;
 let wall1Sprites;
 let wall2Sprites;
+let city2Sprites;
 
 class Background {
   constructor() {}
@@ -16,8 +17,8 @@ class Background {
     wall2Sprites = new Group();
     wheelHydrantSprites = new Group();
     boxesContainerSprites = new Group();
-
-    for (let n = 0; n < 50; n++) {
+    console.log(wall1Sprites);
+    for (let n = 0; n < 60; n++) {
       let skySprites = createSprite(n * width, 220, width, height);
       let buildingSprites = createSprite(n * width, 215, width, height);
       let wall2Sprites = createSprite(n * width, 200, width, height);
@@ -36,7 +37,7 @@ class Background {
     }
   }
 
-  draw() {
+  draw() {   
     drawSprites();
   }
 }

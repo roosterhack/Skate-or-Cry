@@ -2,10 +2,17 @@ const ACCELERATION = 0.3;
 const GAME_WIDTH = 800;
 const GAME_HEIGHT = 450;
 const BGCOLOR = 110;
-const GRAVITY = 0.3;
-const JUMP = -8;
+const GRAVITY = 0.35;
+const JUMP = -7;
 
 function preload() {
+  city2 = loadImage("/assets/img/city1/City2.png");
+  city3 = loadImage("/assets/img/city1/City3.png");
+  city4 = loadImage("/assets/img/city1/City4.png");
+  binCone = loadImage("/assets/img/obstacles/Cone Sprite 30.png");
+  groundCrack = loadImage("/assets/img/obstacles/Crack Sprite 36.png");
+  brickTile = loadImage("/assets/img/obstacles/brick.png");
+
   road1 = loadImage("/assets/img/city1/road-border.png");
   wheelsHydrant = loadImage("/assets/img/city1/wheels-hydrant.png");
   boxesContainer = loadImage("/assets/img/city1/boxes-container.png");
