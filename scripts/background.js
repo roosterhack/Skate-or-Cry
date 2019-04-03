@@ -17,7 +17,7 @@ class Background {
     wall2Sprites = new Group();
     wheelHydrantSprites = new Group();
     boxesContainerSprites = new Group();
-    console.log(wall1Sprites);
+
     for (let n = 0; n < 60; n++) {
       let skySprites = createSprite(n * width, 220, width, height);
       let buildingSprites = createSprite(n * width, 215, width, height);
@@ -37,7 +37,7 @@ class Background {
     }
   }
 
-  draw() {   
+  draw() {
     drawSprites();
   }
 }
