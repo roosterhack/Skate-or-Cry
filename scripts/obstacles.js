@@ -19,8 +19,8 @@ class Obstacles {
 
   draw() {
     //Bricks
-    if (random() > 0.995) {
-      let b = createSprite(camera.position.x + width, random(150, height - 176), random(10, 350), brickTile.height);
+    if (random() > 0.99) {
+      let b = createSprite(camera.position.x + width, random(150, height - 176), random(20, 150), brickTile.height);
       b.addImage(brickTile);
       this.brickSprites.add(b);
     }
@@ -33,7 +33,7 @@ class Obstacles {
     }
 
     // Cones
-    if (random() > 0.994) {
+    if (random() > 0.997) {
       let bin = createSprite(camera.position.x + width, height - 130, 0, 0);
       bin.addImage(binCone);
       bin.scale = 2;
@@ -45,7 +45,7 @@ class Obstacles {
       removeSprite(firstBin);
     }
     //Cracks
-    if (random() > 0.998) {
+    if (random() > 0.999) {
       let crack = createSprite(camera.position.x + width, height - 127, groundCrack.width, groundCrack.height);
       crack.addImage(groundCrack);
       crack.scale = 2;

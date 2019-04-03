@@ -6,6 +6,8 @@ const GRAVITY = 0.35;
 const JUMP = -8;
 
 function preload() {
+  fontRegular = loadFont("/assets/fonts/Retro Gaming.ttf");
+  gameOver = loadImage("/assets/img/gameOver/gameOver.jpg");
   city2 = loadImage("/assets/img/city1/City2.png");
   city3 = loadImage("/assets/img/city1/City3.png");
   city4 = loadImage("/assets/img/city1/City4.png");
@@ -20,32 +22,7 @@ function preload() {
   binCone = loadImage("/assets/img/obstacles/cropped/Mask Group cone.png");
   groundCrack = loadImage("/assets/img/obstacles/cropped/Mask Group crack.png");
   brickTile = loadImage("/assets/img/obstacles/brick.png");
-  // playerPush = loadAnimation(
-  //   "/assets/img/skater/Sprite 12.png",
-  //   "/assets/img/skater/Sprite 13.png",
-  //   "/assets/img/skater/Sprite 14.png",
-  //   "/assets/img/skater/Sprite 15.png",
-  //   "/assets/img/skater/Sprite 16.png",
-  //   "/assets/img/skater/Sprite 17.png",
-  //   "/assets/img/skater/Sprite 18.png",
-  //   "/assets/img/skater/Sprite 19.png",
-  //   "/assets/img/skater/Sprite 13.png",
-  //   "/assets/img/skater/Sprite 13.png",
-  //   "/assets/img/skater/Sprite 13.png"
-  // );
-  // playerOllie = loadAnimation(
-  //   "/assets/img/skater/Sprite 02.png",
-  //   "/assets/img/skater/Sprite 03.png",
-  //   "/assets/img/skater/Sprite 04.png",
-  //   "/assets/img/skater/Sprite 05.png",
-  //   "/assets/img/skater/Sprite 06.png",
-  //   "/assets/img/skater/Sprite 06.png",
-  //   "/assets/img/skater/Sprite 07.png",
-  //   "/assets/img/skater/Sprite 08.png",
-  //   "/assets/img/skater/Sprite 09.png",
-  //   "/assets/img/skater/Sprite 10.png",
-  //   "/assets/img/skater/Sprite 11.png"
-  // );
+
   playerPush = loadAnimation(
     "/assets/img/skater/cropped/Mask Group 14.png",
     "/assets/img/skater/cropped/Mask Group 15.png",

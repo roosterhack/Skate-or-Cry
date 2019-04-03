@@ -16,6 +16,7 @@ class ThePlayer {
     this.mainPlayer = createSprite(0, 0, 20, 20);
     this.mainPlayer.addAnimation("push", playerPush);
     this.mainPlayer.addAnimation("ollie", playerOllie);
+    this.mainPlayer.addAnimation("slam", playerSlam);
     this.mainPlayer.scale = 2;
     this.mainPlayer.position.y = height - 450;
   }

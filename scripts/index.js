@@ -7,3 +7,11 @@ function setup() {
 function draw() {
   game.draw();
 }
+
+function mousePressed() {
+  if (isGameOver) {
+    document.querySelector("canvas").addEventListener("click", function() {
+      location.reload();
+    });
+  }
+}
