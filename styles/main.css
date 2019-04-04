@@ -114,6 +114,10 @@ canvas {
   background: url("../assets/img/space-key.svg") no-repeat;
 }
 
+.f-key {
+  background: url("../assets/img/f-key.svg") no-repeat;
+}
+
 @keyframes slide {
   from {
     background-position: 0 0;

@@ -56,12 +56,17 @@ function preload() {
     "../assets/img/skater/cropped/Mask Group 9.png",
     "../assets/img/skater/cropped/Mask Group 10.png"
   );
-  playerSlam = loadAnimation(
-    "../assets/img/skater/cropped/Mask Group 20.png",
-    "../assets/img/skater/cropped/Mask Group 21.png",
-    "../assets/img/skater/cropped/Mask Group 22.png",
-    "../assets/img/skater/cropped/Mask Group 23.png",
-    "../assets/img/skater/cropped/Mask Group 24.png",
-    "../assets/img/skater/cropped/Mask Group 25.png"
+  playerFlip = loadAnimation(
+    "../assets/img/skater/cropped/kickflip/k1.png",
+    "../assets/img/skater/cropped/kickflip/k2.png",
+    "../assets/img/skater/cropped/kickflip/k3.png",
+    "../assets/img/skater/cropped/kickflip/k4.png",
+    "../assets/img/skater/cropped/kickflip/k4.png",
+    "../assets/img/skater/cropped/kickflip/k5.png",
+    "../assets/img/skater/cropped/kickflip/k5.png",
+    "../assets/img/skater/cropped/kickflip/k6.png",
+    "../assets/img/skater/cropped/kickflip/k7.png",
+    "../assets/img/skater/cropped/kickflip/k8.png",
+    "../assets/img/skater/cropped/kickflip/k9.png"
   );
 }
