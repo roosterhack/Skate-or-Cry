@@ -35,11 +35,11 @@ class ThePlayer {
       this.Jumped = false;
     }
 
-    if (keyDown(16) || (keyDown(32) && !this.Jumped)) {
+    if (keyDown(32) && !this.Jumped) {
       if (!ollieSound.isPlaying()) {
         ollieSound.play();
       }
-      this.mainPlayer.velocity.y = JUMP;
+      this.mainPlayer.velocity.y = jump;
       this.mainPlayer.changeAnimation("ollie", playerOllie);
 
       this.Jumped = true;
@@ -50,7 +50,6 @@ class ThePlayer {
     drawSprites();
   }
 }
-
 setInterval(function() {
   acceleration += 1;
-}, 3000);
+}, 7000);

@@ -3,7 +3,7 @@ const GAME_WIDTH = 800;
 const GAME_HEIGHT = 450;
 const BGCOLOR = 110;
 const GRAVITY = 0.35;
-const JUMP = -8;
+let jump = -8;
 
 function preload() {
   pushSound = loadSound("/assets/sounds/rolling.mp3");
@@ -28,8 +28,8 @@ function preload() {
   binCone = loadImage("/assets/img/obstacles/cropped/Mask Group cone.png");
   groundCrack = loadImage("/assets/img/obstacles/cropped/Mask Group crack.png");
   brickTile = loadImage("/assets/img/obstacles/brick.png");
-  cash = loadImage("/assets/img/obstacles/Money Sprite 35.png");
-  time = loadImage("/assets/img/obstacles/Timer Sprite 27.png");
+  cashMoney = loadImage("/assets/img/obstacles/cropped/Mask Group cash.png");
+  clock = loadImage("/assets/img/obstacles/cropped/Timer Sprite 27.svg");
 
   playerPush = loadAnimation(
     "/assets/img/skater/cropped/Mask Group 14.png",

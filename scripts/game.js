@@ -1,5 +1,5 @@
 let isGameOver;
-let fontsize = 60;
+let fontsize = 65;
 let score;
 
 class Game {
@@ -33,8 +33,9 @@ class Game {
       text("Game Over! Click anywhere to restart", camera.position.x, camera.position.y);
     } else {
       this.obstacles.binSprites.collide(this.player.mainPlayer, endGame);
-      this.obstacles.crackSprites.overlap(this.player.mainPlayer, endGame);
-      this.obstacles.brickSprites.overlap(this.player.mainPlayer);
+      this.obstacles.crackSprites.collide(this.player.mainPlayer, endGame);
+      this.obstacles.brickSprites.collide(this.player.mainPlayer, endGame);
+      // this.obstacles.cashSprites.overlap(this.player.mainPlayer, ollieHigher);
       this.background.draw();
       this.player.draw();
       this.obstacles.draw();
@@ -52,3 +53,9 @@ function endGame() {
   hurtSound.play();
   isGameOver = true;
 }
+
+// function ollieHigher() {
+//   jump = -6;
+//   setTimeout(() => {}, 2500);
+//   jump = -8;
+// }
