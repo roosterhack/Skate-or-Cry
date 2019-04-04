@@ -1,26 +1,32 @@
-let benchSprites;
+let timeSprites;
 let binSprites;
 let crackSprites;
 let brickSprites;
+let cashSprites;
 
 class Obstacles {
   constructor() {
     this.binSprites = binSprites;
     this.crackSprites = crackSprites;
     this.brickSprites = brickSprites;
-    this.benchSprites = benchSprites;
+    this.cashSprites = cashSprites;
+    this.timeSprites = timeSprites;
   }
 
   setup() {
     this.binSprites = new Group();
     this.crackSprites = new Group();
     this.brickSprites = new Group();
+    this.cashSprites = new Group();
+    this.timeSprites = new Group();
   }
 
   draw() {
+    //incentives
+
     //Bricks
-    if (random() > 0.99) {
-      let b = createSprite(camera.position.x + width, random(150, height - 176), random(20, 150), brickTile.height);
+    if (random() > 0.998) {
+      let b = createSprite(camera.position.x + width, random(150, height - 150), random(20, 250), brickTile.height);
       b.addImage(brickTile);
       this.brickSprites.add(b);
     }

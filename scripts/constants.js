@@ -28,8 +28,11 @@ function preload() {
   binCone = loadImage("/assets/img/obstacles/cropped/Mask Group cone.png");
   groundCrack = loadImage("/assets/img/obstacles/cropped/Mask Group crack.png");
   brickTile = loadImage("/assets/img/obstacles/brick.png");
+  cash = loadImage("/assets/img/obstacles/Money Sprite 35.png");
+  time = loadImage("/assets/img/obstacles/Timer Sprite 27.png");
 
   playerPush = loadAnimation(
+    "/assets/img/skater/cropped/Mask Group 14.png",
     "/assets/img/skater/cropped/Mask Group 14.png",
     "/assets/img/skater/cropped/Mask Group 15.png",
     "/assets/img/skater/cropped/Mask Group 16.png",
@@ -38,13 +41,15 @@ function preload() {
     "/assets/img/skater/cropped/Mask Group 19.png",
     "/assets/img/skater/cropped/Mask Group 14.png",
     "/assets/img/skater/cropped/Mask Group 14.png",
+    "/assets/img/skater/cropped/Mask Group 14.png",
     "/assets/img/skater/cropped/Mask Group 14.png"
   );
   playerOllie = loadAnimation(
-    "/assets/img/skater/cropped/Mask Group 2.png",
-    "/assets/img/skater/cropped/Mask Group 3.png",
     "/assets/img/skater/cropped/Mask Group 4.png",
+    "/assets/img/skater/cropped/Mask Group 3.png",
+    "/assets/img/skater/cropped/Mask Group 2.png",
     "/assets/img/skater/cropped/Mask Group 5.png",
+    "/assets/img/skater/cropped/Mask Group 7.png",
     "/assets/img/skater/cropped/Mask Group 7.png",
     "/assets/img/skater/cropped/Mask Group 6.png",
     "/assets/img/skater/cropped/Mask Group 8.png",

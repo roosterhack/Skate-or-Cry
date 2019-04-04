@@ -3,6 +3,7 @@ let playerPush;
 let moveRight;
 let playerOllie;
 let playerKickflip;
+let acceleration = 1;
 
 class ThePlayer {
   constructor() {
@@ -16,16 +17,16 @@ class ThePlayer {
     this.mainPlayer = createSprite(0, 0, 20, 20);
     this.mainPlayer.addAnimation("push", playerPush);
     this.mainPlayer.addAnimation("ollie", playerOllie);
-    this.mainPlayer.addAnimation("slam", playerSlam); // not working
     this.mainPlayer.scale = 2;
     this.mainPlayer.position.y = height - 450;
-    hipHop1.loop();
-    hipHop1.setVolume(0.6);
+
+    // hipHop1.loop();
+    // hipHop1.setVolume(0.6);
   }
   draw() {
     background(BGCOLOR);
     this.mainPlayer.velocity.y += GRAVITY;
-    this.mainPlayer.position.x += 5;
+    this.mainPlayer.position.x += 5 + acceleration;
 
     // //detect player touching the ground then make player stop going down
     if (this.mainPlayer.position.y + this.mainPlayer.height >= height - 70) {
@@ -49,3 +50,7 @@ class ThePlayer {
     drawSprites();
   }
 }
+
+setInterval(function() {
+  acceleration += 1;
+}, 3000);
