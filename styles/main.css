@@ -1,15 +1,15 @@
 @font-face {
-  src: url("/assets/fonts/Skateboardfont-Regular.otf");
+  src: url("../assets/fonts/Skateboardfont-Regular.otf");
   font-family: skateboardDark;
 }
 
 @font-face {
-  src: url("/assets/fonts/tabla.ttf");
+  src: url("../assets/fonts/tabla.ttf");
   font-family: skateboardLight;
 }
 
 @font-face {
-  src: url("/assets/fonts/Retro\ Gaming.ttf");
+  src: url("../assets/fonts/Retro\ Gaming.ttf");
   font-family: retro;
 }
 
@@ -44,7 +44,7 @@ canvas {
   align-items: center;
   border: 10px solid #fff;
   border-radius: 15px;
-  background: gray url("/assets/img/start-bg.jpg") repeat 0 0;
+  background: gray url("../assets/img/start-bg.jpg") repeat 0 0;
   width: 800px;
   height: 450px;
   text-align: center;
@@ -107,11 +107,11 @@ canvas {
   margin: 15px 20px;
 }
 .shift-key {
-  background: url("/assets/img/shift-key.svg") no-repeat;
+  background: url("../assets/img/shift-key.svg") no-repeat;
 }
 
 .space-key {
-  background: url("/assets/img/space-key.svg") no-repeat;
+  background: url("../assets/img/space-key.svg") no-repeat;
 }
 
 @keyframes slide {
