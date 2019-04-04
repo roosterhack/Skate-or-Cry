@@ -16,7 +16,7 @@ class ThePlayer {
     this.mainPlayer = createSprite(0, 0, 20, 20);
     this.mainPlayer.addAnimation("push", playerPush);
     this.mainPlayer.addAnimation("ollie", playerOllie);
-    this.mainPlayer.addAnimation("slam", playerSlam);
+    this.mainPlayer.addAnimation("slam", playerSlam); // not working
     this.mainPlayer.scale = 2;
     this.mainPlayer.position.y = height - 450;
     hipHop1.loop();
@@ -34,7 +34,7 @@ class ThePlayer {
       this.Jumped = false;
     }
 
-    if (keyDown(16) && !this.Jumped) {
+    if (keyDown(16) || (keyDown(32) && !this.Jumped)) {
       if (!ollieSound.isPlaying()) {
         ollieSound.play();
       }

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="83.324" height="61.756" viewBox="0 0 83.324 61.756">
+  <g id="Group_25" data-name="Group 25" transform="translate(-206 -296)">
+    <g id="Group_23" data-name="Group 23" transform="translate(206 296)">
+      <g id="Group_21" data-name="Group 21" transform="translate(0 2.637)">
+        <path id="Path_15" data-name="Path 15" d="M242.1,44.265H205.532c-6.5,0-11.953,1.862-16.524,6.051q-6.855,6.052-6.856,14.431v18c0,5.741,2.286,10.551,6.856,14.586a24.005,24.005,0,0,0,16.524,6.051H242.1a23.7,23.7,0,0,0,16.524-6.051c4.571-4.035,6.855-8.845,6.855-14.586v-18q0-8.379-6.855-14.431C254.226,46.127,248.6,44.265,242.1,44.265Z" transform="translate(-182.152 -44.265)" fill="#ccc"/>
+      </g>
+      <g id="Group_22" data-name="Group 22" transform="translate(7.758)">
+        <path id="Path_16" data-name="Path 16" d="M250.06,38.085H219.68a20.678,20.678,0,0,0-13.743,4.965,14.776,14.776,0,0,0-5.6,11.638V69.118a14.641,14.641,0,0,0,5.6,11.792,20.55,20.55,0,0,0,13.743,4.81h30.38a20.081,20.081,0,0,0,13.562-4.81,14.643,14.643,0,0,0,5.6-11.792V54.687a14.777,14.777,0,0,0-5.6-11.638A20.21,20.21,0,0,0,250.06,38.085Z" transform="translate(-200.332 -38.085)" fill="#fff"/>
+      </g>
+    </g>
+    <text id="SPACE" transform="translate(213 311)" fill="#0d0d0d" font-size="15" font-family="RetroGaming, Retro Gaming"><tspan x="5.797" y="15">SPACE</tspan></text>
+  </g>
+</svg>
