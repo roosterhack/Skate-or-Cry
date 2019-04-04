@@ -21,8 +21,8 @@ class ThePlayer {
     this.mainPlayer.scale = 2;
     this.mainPlayer.position.y = height - 450;
 
-    // hipHop1.loop();
-    // hipHop1.setVolume(0.6);
+    hipHop1.loop();
+    hipHop1.setVolume(0.6);
   }
   draw() {
     background(BGCOLOR);

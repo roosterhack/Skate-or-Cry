@@ -4,9 +4,9 @@ const GAME_HEIGHT = 450;
 const BGCOLOR = 110;
 const GRAVITY = 0.35;
 let jump = -8;
-
+console.log("Constants.js loaded..");
 function preload() {
-  pushSound = loadSound("../assets/sounds/rolling.mp3");
+  pushSound = loadSound("./assets/sounds/rolling.mp3");
   ollieSound = loadSound("../assets/sounds/ollie.mp3");
   hurtSound = loadSound("../assets/sounds/hurt.mp3");
   hipHop1 = loadSound("../assets/sounds/oldschoolhiphop.wav");
