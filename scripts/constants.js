@@ -11,6 +11,7 @@ function preload() {
   hurtSound = loadSound("../assets/sounds/hurt.mp3");
   hipHop1 = loadSound("../assets/sounds/oldschoolhiphop.wav");
   hipHop2 = loadSound("../assets/sounds/hiphop.wav");
+  kaChing = loadSound("../assets/sounds/ka-ching.mp3");
 
   fontRegular = loadFont("../assets/fonts/Retro Gaming.ttf");
   gameOver = loadImage("../assets/img/gameOver/gameOver.jpg");

@@ -18,12 +18,12 @@ class ThePlayer {
     this.mainPlayer.addAnimation("push", playerPush);
     this.mainPlayer.addAnimation("ollie", playerOllie);
     this.mainPlayer.addAnimation("flip", playerFlip);
-    this.mainPlayer.addAnimation("slam", playerSlam);
+    ``;
     this.mainPlayer.scale = 2;
     this.mainPlayer.position.y = height - 450;
 
-    hipHop1.loop();
-    hipHop1.setVolume(0.6);
+    // hipHop1.loop();
+    // hipHop1.setVolume(0.6);
   }
   draw() {
     background(BGCOLOR);

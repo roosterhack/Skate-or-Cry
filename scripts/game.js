@@ -1,5 +1,6 @@
 let isGameOver;
 let score;
+let extra;
 
 class Game {
   constructor() {
@@ -8,7 +9,8 @@ class Game {
     this.player = new ThePlayer();
     this.background = new Background();
     this.obstacles = new Obstacles();
-    this.score = 0;
+    this.score = score;
+    this.extra = extra;
   }
 
   setup() {
@@ -19,6 +21,7 @@ class Game {
     this.player.setup();
     this.obstacles.setup();
     this.score = 0;
+    this.extra = 1000;
   }
   draw() {
     if (isGameOver) {
@@ -34,7 +37,7 @@ class Game {
       this.obstacles.binSprites.collide(this.player.mainPlayer, endGame);
       this.obstacles.crackSprites.collide(this.player.mainPlayer, endGame);
       this.obstacles.brickSprites.collide(this.player.mainPlayer, endGame);
-      // this.obstacles.cashSprites.overlap(this.player.mainPlayer, ollieHigher);
+      this.obstacles.cashSprites.overlap(this.player.mainPlayer, extraPoints);
       this.background.draw();
       this.player.draw();
       this.obstacles.draw();
@@ -53,9 +56,8 @@ function endGame() {
   isGameOver = true;
 }
 
-// function ollieHigher() {
-//   jump = -6;
-
-//   setTimeout(() => {}, 2500);
-//   jump = -8;
-// }
+function extraPoints(collector, collected) {
+  kaChing.play();
+  collector.remove();
+  Game.score += Game.extra;
+}

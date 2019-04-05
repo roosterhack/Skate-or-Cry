@@ -22,31 +22,31 @@ class Obstacles {
   }
 
   draw() {
-    //incentives
-    // if (random() > 0.9988) {
-    //   let cash = createSprite(camera.position.x + width, random(180, height - 160), cashMoney.width, cashMoney.height);
-    //   cash.addImage(cashMoney);
-    //   cash.scale = 2.5;
-    //   this.cashSprites.add(cash);
-    // }
-    // let firstTime = this.cashSprites[0];
-    // if (this.cashSprites.length > 0 && firstTime.position.x <= camera.position.x - (width / 2 + firstTime.width / 2)) {
-    //   removeSprite(firstTime);
-    // }
+    // incentives;
+    if (random() > 0.998) {
+      let cash = createSprite(camera.position.x + width, random(180, height - 160), cashMoney.width, cashMoney.height);
+      cash.addImage(cashMoney);
+      cash.scale = 2.5;
+      this.cashSprites.add(cash);
+    }
+    let firstTime = this.cashSprites[0];
+    if (this.cashSprites.length > 0 && firstTime.position.x <= camera.position.x - (width / 2 + firstTime.width / 2)) {
+      removeSprite(firstTime);
+    }
 
     //Bricks
-    if (random() > 0.998) {
-      let b = createSprite(camera.position.x + width, random(150, height - 150), skullHead.width, skullHead.height);
-      b.addAnimation("skull", skullHead);
-      this.brickSprites.add(b);
-    }
-    let firstBrick = this.brickSprites[0];
-    if (
-      this.brickSprites.length > 0 &&
-      firstBrick.position.x <= camera.position.x - (width / 2 + firstBrick.width / 2)
-    ) {
-      removeSprite(firstBrick);
-    }
+    // if (random() > 0.998) {
+    //   let b = createSprite(camera.position.x + width, random(150, height - 150), skullHead.width, skullHead.height);
+    //   b.addAnimation('skull',skullHead);
+    //   this.brickSprites.add(b);
+    // }
+    // let firstBrick = this.brickSprites[0];
+    // if (
+    //   this.brickSprites.length > 0 &&
+    //   firstBrick.position.x <= camera.position.x - (width / 2 + firstBrick.width / 2)
+    // ) {
+    //   removeSprite(firstBrick);
+    // }
 
     // Cones
     if (random() > 0.997) {
