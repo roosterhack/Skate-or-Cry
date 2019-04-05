@@ -3,6 +3,7 @@ let binSprites;
 let crackSprites;
 let brickSprites;
 let cashSprites;
+let blueBarSprites;
 
 class Obstacles {
   constructor() {
@@ -11,6 +12,7 @@ class Obstacles {
     this.brickSprites = brickSprites;
     this.cashSprites = cashSprites;
     this.timeSprites = timeSprites;
+    this.blueBarSprites = blueBarSprites;
   }
 
   setup() {
@@ -19,6 +21,7 @@ class Obstacles {
     this.brickSprites = new Group();
     this.cashSprites = new Group();
     this.timeSprites = new Group();
+    this.blueBarSprites = new Group();
   }
 
   draw() {
@@ -61,19 +64,32 @@ class Obstacles {
       removeSprite(firstBin);
     }
     //Cracks
-    if (random() > 0.999) {
-      let crack = createSprite(camera.position.x + width, height - 127, groundCrack.width, groundCrack.height);
-      crack.addImage(groundCrack);
-      crack.scale = 2;
-      this.crackSprites.add(crack);
+    // if (random() > 0.999) {
+    //   let crack = createSprite(camera.position.x + width, height - 127, groundCrack.width, groundCrack.height);
+    //   crack.addImage(groundCrack);
+    //   crack.scale = 2;
+    //   this.crackSprites.add(crack);
+    // }
+
+    // let firstCrack = this.crackSprites[0];
+    // if (
+    //   this.crackSprites.length > 0 &&
+    //   firstCrack.position.x <= camera.position.x - (width / 2 + firstCrack.width / 2)
+    // ) {
+    //   removeSprite(firstCrack);
+    // }
+
+    //bluebar
+    if (random() > 0.998) {
+      let blueBars = createSprite(camera.position.x + width, height - 127, blueBar.width, blueBar.height);
+      blueBars.addImage(blueBar);
+      blueBars.scale = 2;
+      this.blueBarSprites.add(blueBars);
     }
 
-    let firstCrack = this.crackSprites[0];
-    if (
-      this.crackSprites.length > 0 &&
-      firstCrack.position.x <= camera.position.x - (width / 2 + firstCrack.width / 2)
-    ) {
-      removeSprite(firstCrack);
+    let firstBar = this.blueBarSprites[0];
+    if (this.blueBarSprites.length > 0 && firstBar.position.x <= camera.position.x - (width / 2 + firstBar.width / 2)) {
+      removeSprite(firstBar);
     }
   }
 }

@@ -25,6 +25,7 @@ body {
 }
 
 body {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -123,6 +124,38 @@ canvas {
 
 .f-key {
   background: url("../assets/img/f-key.svg") no-repeat;
+}
+
+.extraPoints {
+  position: absolute;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #efdc05;
+  font-size: 20px;
+  opacity: 0;
+  font-family: "retro";
+  transition: all 0.25 ease-in-out;
+}
+.show {
+  animation: pop 0.25s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+/* Animations */
+@keyframes pop {
+  50% {
+    transform: scale(8);
+    opacity: 1;
+  }
+  90% {
+    transform: scale(8);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
 }
 
 @keyframes slide {

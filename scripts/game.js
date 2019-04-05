@@ -1,6 +1,7 @@
 let isGameOver;
 let score;
 let extra;
+let extraText;
 
 class Game {
   constructor() {
@@ -11,6 +12,7 @@ class Game {
     this.obstacles = new Obstacles();
     this.score = score;
     this.extra = extra;
+    this.extraText = extraText;
   }
 
   setup() {
@@ -22,6 +24,8 @@ class Game {
     this.obstacles.setup();
     this.score = 0;
     this.extra = 1000;
+    this.extraText = createElement("h3", `+${this.extra}`);
+    this.extraText.addClass("extraPoints");
   }
   draw() {
     if (isGameOver) {
@@ -35,9 +39,9 @@ class Game {
       text("Game Over! Click anywhere to restart", camera.position.x, camera.position.y);
     } else {
       this.obstacles.binSprites.collide(this.player.mainPlayer, endGame);
-      this.obstacles.crackSprites.collide(this.player.mainPlayer, endGame);
+      this.obstacles.blueBarSprites.collide(this.player.mainPlayer, endGame);
       this.obstacles.brickSprites.collide(this.player.mainPlayer, endGame);
-      this.obstacles.cashSprites.overlap(this.player.mainPlayer, extraPoints);
+      this.obstacles.cashSprites.overlap(this.player.mainPlayer, this.extraPoints.bind(this));
       this.background.draw();
       this.player.draw();
       this.obstacles.draw();
@@ -49,15 +53,18 @@ class Game {
       text(this.score + " points", camera.position.x, 50);
     }
   }
+  extraPoints(collector) {
+    kaChing.play();
+    collector.remove();
+    this.score += this.extra;
+    this.extraText.addClass("show");
+    setTimeout(() => {
+      this.extraText.removeClass("show");
+    }, 300);
+  }
 }
 
 function endGame() {
   hurtSound.play();
   isGameOver = true;
-}
-
-function extraPoints(collector, collected) {
-  kaChing.play();
-  collector.remove();
-  Game.score += Game.extra;
 }

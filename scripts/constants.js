@@ -31,6 +31,7 @@ function preload() {
   brickTile = loadImage("../assets/img/obstacles/brick.png");
   cashMoney = loadImage("../assets/img/obstacles/cropped/Mask Group cash.png");
   clock = loadImage("../assets/img/obstacles/cropped/Timer Sprite 27.svg");
+  blueBar = loadImage("../assets/img/obstacles/cropped/Mask Group blueBar.png");
 
   playerPush = loadAnimation(
     "../assets/img/skater/cropped/Mask Group 14.png",
