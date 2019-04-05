@@ -4,6 +4,7 @@ let moveRight;
 let playerOllie;
 let playerKickflip;
 let acceleration = 1;
+let charge = 0.5;
 
 class ThePlayer {
   constructor() {
@@ -18,7 +19,6 @@ class ThePlayer {
     this.mainPlayer.addAnimation("push", playerPush);
     this.mainPlayer.addAnimation("ollie", playerOllie);
     this.mainPlayer.addAnimation("flip", playerFlip);
-    ``;
     this.mainPlayer.scale = 2;
     this.mainPlayer.position.y = height - 450;
 
@@ -46,7 +46,6 @@ class ThePlayer {
 
       this.Jumped = true;
     }
-
     if (keyDown(70) && !this.Jumped) {
       if (!ollieSound.isPlaying()) {
         ollieSound.play();

@@ -23,7 +23,7 @@ class Game {
     this.player.setup();
     this.obstacles.setup();
     this.score = 0;
-    this.extra = 1000;
+    this.extra = 500;
     this.extraText = createElement("h3", `+${this.extra}`);
     this.extraText.addClass("extraPoints");
   }
@@ -59,7 +59,7 @@ class Game {
     this.extraText.addClass("show");
     setTimeout(() => {
       this.extraText.removeClass("show");
-    }, 300);
+    }, 500);
   }
 }
 

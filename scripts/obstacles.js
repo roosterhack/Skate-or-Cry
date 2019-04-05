@@ -25,8 +25,8 @@ class Obstacles {
   }
 
   draw() {
-    // incentives;
-    if (random() > 0.998) {
+    // incentives cash for extra points
+    if (random() > 0.99) {
       let cash = createSprite(camera.position.x + width, random(180, height - 160), cashMoney.width, cashMoney.height);
       cash.addImage(cashMoney);
       cash.scale = 2.5;
