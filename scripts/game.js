@@ -1,5 +1,4 @@
 let isGameOver;
-let fontsize = 65;
 let score;
 
 class Game {
@@ -42,9 +41,9 @@ class Game {
       this.score++;
       fill(250);
       textFont(fontRegular);
-      textSize(fontsize);
+      textSize(40);
       textAlign(CENTER);
-      text(this.score, camera.position.x, 50);
+      text(this.score + " points", camera.position.x, 50);
     }
   }
 }
@@ -56,6 +55,7 @@ function endGame() {
 
 // function ollieHigher() {
 //   jump = -6;
+
 //   setTimeout(() => {}, 2500);
 //   jump = -8;
 // }

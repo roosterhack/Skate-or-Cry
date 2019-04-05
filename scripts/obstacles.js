@@ -35,9 +35,9 @@ class Obstacles {
     // }
 
     //Bricks
-    if (random() > 0.9989) {
-      let b = createSprite(camera.position.x + width, random(150, height - 150), random(20, 250), brickTile.height);
-      b.addImage(brickTile);
+    if (random() > 0.998) {
+      let b = createSprite(camera.position.x + width, random(150, height - 150), skullHead.width, skullHead.height);
+      b.addAnimation("skull", skullHead);
       this.brickSprites.add(b);
     }
     let firstBrick = this.brickSprites[0];

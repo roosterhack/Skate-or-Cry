@@ -69,4 +69,11 @@ function preload() {
     "../assets/img/skater/cropped/kickflip/k8.png",
     "../assets/img/skater/cropped/kickflip/k9.png"
   );
+
+  skullHead = loadAnimation(
+    "../assets/img/obstacles/skull/skull1.png",
+    "../assets/img/obstacles/skull/skull2.png",
+    "../assets/img/obstacles/skull/skull3.png",
+    "../assets/img/obstacles/skull/skull4.png"
+  );
 }

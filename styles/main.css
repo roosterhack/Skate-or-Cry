@@ -56,6 +56,7 @@ canvas {
   color: #fff;
   font-size: 90px;
   margin-bottom: 5px;
+  animation: shake 1.8s infinite;
 }
 .game p {
   font-family: "retro";
@@ -79,12 +80,18 @@ canvas {
   border-radius: 7px;
   box-shadow: 0 0.2em gray;
   cursor: pointer;
+  animation: beat 0.28s infinite alternate;
+  transform-origin: center;
 }
 
 .game .play:active {
   box-shadow: none;
   position: relative;
   top: 0.2em;
+}
+
+.game .play:hover {
+  background: #f7f7f7;
 }
 
 .game .play a {
@@ -124,5 +131,29 @@ canvas {
   }
   to {
     background-position: -1597px 0;
+  }
+}
+
+@keyframes beat {
+  to {
+    transform: scale(1.13);
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(0deg);
+  }
+  80% {
+    transform: rotate(0deg);
+  }
+  85% {
+    transform: rotate(5deg);
+  }
+  95% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
   }
 }
