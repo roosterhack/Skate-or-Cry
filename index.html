@@ -26,6 +26,22 @@
         </div>
       </div>
     </section>
-    <script></script>
+    <script>
+      myAudio = new Audio("assets/sounds/hiphop.wav");
+      myAudio.addEventListener(
+        "ended",
+        function() {
+          this.currentTime = 0;
+          this.play();
+        },
+        false
+      );
+      myAudio.play();
+
+      const playGame = document.querySelector(".play");
+      playGame.addEventListener("click", () => {
+        myAudio.volume -= 0.5;
+      });
+    </script>
   </body>
 </html>
