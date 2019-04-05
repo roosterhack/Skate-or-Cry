@@ -31,7 +31,6 @@ class Game {
     if (isGameOver) {
       hipHop1.stop();
       background(0);
-      image(gameOver, 0, 0);
       fill(255);
       textFont(fontRegular);
       textAlign(CENTER);
